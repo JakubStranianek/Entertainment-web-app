@@ -39,6 +39,7 @@ $pureWhite: #FFFFFF;
     height: 48px;
     border: none;
     border-radius: 6px;
+    @include bodyM;
 }
 
 @mixin buttonIdle {
