@@ -1,0 +1,52 @@
+$red: #FC4747;
+$darkBlue: #10141E;
+$greyishBlue: #5A698F;
+$semiDarkBlue: #161D2F;
+$pureWhite: #FFFFFF;
+
+@mixin headingL {
+    font-size: 32px;
+    font-weight: 200;
+}
+
+@mixin headingM {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+@mixin headingS {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+@mixin headingXS {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+@mixin bodyM {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+@mixin bodyS {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+@mixin button {
+    width: 336px;
+    height: 48px;
+    border: none;
+    border-radius: 6px;
+}
+
+@mixin buttonIdle {
+    background-color: $red;
+    color: $pureWhite;
+}
+
+@mixin buttonHover {
+    background-color: $pureWhite;
+    color: $semiDarkBlue;
+}
