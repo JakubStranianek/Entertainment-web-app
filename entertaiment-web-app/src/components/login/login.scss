@@ -36,20 +36,11 @@
             margin-top: 16px;
             position: relative;
 
-            label {
+            .error {
                 @include bodyS;
-                position: absolute;
                 color: $red;
-            }
-
-            label:nth-child(1) {
-                top: 26%;
-                left: 73%;
-            }
-
-            label:nth-child(3) {
-                top: 76%;
-                left: 73%;
+                float: right;
+                margin-top: -30px;
             }
 
             input {
@@ -100,4 +91,8 @@
         }   
         
     }
+}
+
+#signUpForm {
+    height: 418px;
 }
