@@ -3,15 +3,12 @@
 .mainApp {
     width: 100%;
     background-color: $darkBlue;
-    height: 100vh;
+    padding-left: 172px;
 
     .searchBox {
         display: flex;
         align-items: center;
-        position: absolute;
-        top: 40px;
-        left: 172px;
-
+        padding-top: 40px;
         img {
             width: 32px;
         }
