@@ -1,0 +1,78 @@
+@import "../../defined-styles/definedStyles.scss";
+
+.trending {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow: scroll;
+    margin-top: 25px;
+    
+    .trend {
+        margin-right: 40px;
+        position: relative;
+        scroll-snap-align: start;
+        img {
+            width: 470px;
+            height: 230px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .fullDesc {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+
+            .description {
+                display: flex;
+                align-items: center;
+                p {
+                    color: $pureWhite;
+                    @include bodyM;
+                    opacity: 0.75;
+                }
+
+                img {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 0;
+                    filter:  brightness(0) invert(1);
+                }
+
+
+                p:nth-Child(3)::before{
+                    content: " ";
+                    padding: 0 4px;                        
+                }
+
+                p:nth-Child(1)::after,
+                p:nth-Child(3)::after {
+                    content: "·";
+                    padding: 0 4px;
+                    font-weight: bold;
+                }
+            }
+            h3 {
+                color: $pureWhite;
+                @include headingS;
+            }
+        }
+        .mark {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            width: 32px;
+            height: 32px;
+            background-color: #979797;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            img {
+                width: 11px;
+                height: 14px;
+                border-radius: 0;
+            }
+        }
+    }
+}

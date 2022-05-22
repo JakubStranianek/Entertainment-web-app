@@ -1,7 +1,7 @@
 @import "../../defined-styles/definedStyles.scss";
 
 .mainApp {
-    width: 100%;
+    max-width: 100%;
     background-color: $darkBlue;
     padding-left: 172px;
 
@@ -24,5 +24,11 @@
         input:focus {
             outline: none;
         }
+    }
+
+    h2 {
+        color: $pureWhite;
+        @include headingL;
+        margin-top: 34px;
     }
 }
