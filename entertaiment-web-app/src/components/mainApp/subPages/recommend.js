@@ -1,11 +1,12 @@
 import React from "react";
 import "./recommend.scss";
-import movie from "../../assets/icon-nav-movies.svg";
-import tvSeries from "../../assets/icon-nav-tv-series.svg";
-import marked from "../../assets/icon-bookmark-full.svg";
-import unMarked from "../../assets/icon-bookmark-empty.svg";
+import movie from "../../../assets/icon-nav-movies.svg";
+import tvSeries from "../../../assets/icon-nav-tv-series.svg";
+import marked from "../../../assets/icon-bookmark-full.svg";
+import unMarked from "../../../assets/icon-bookmark-empty.svg";
 
 export default function recommend(props) {
+
   return (
     <div className="recommend">
       {props.usedData.map((index) =>

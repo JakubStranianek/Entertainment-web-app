@@ -3,7 +3,11 @@ import {Routes, Route} from "react-router-dom"
 import { useState } from "react"
 import Login from "./components/login/login.js"
 import SignUp from "./components/signUp/signUp.js"
-import MainApp from "./components/mainApp/mainApp.js"
+import Home from "./components/mainApp/mainApp.js"
+import Movies from './components/mainApp/subPages/movies';
+import TvSeries from './components/mainApp/subPages/tvSeries';
+import Bookmarked from './components/mainApp/subPages/bookmarked';
+import data from "./components/mainApp/data.json";
 
 function App() {
 
@@ -42,7 +46,10 @@ function App() {
     <Routes>
       <Route path='/' element={<Login mail={email} pass={password} validM={validMail} handleM={handleEmail} handleP={handlePassword} handleS={handleSubmit}/>}/>
       <Route path='/signUp' element={<SignUp mail={email} pass={password} validM={validMail} handleM={handleEmail} handleP={handlePassword} handleS={handleSubmit} setPassR={handlePasswordRepeat} passR={passwordRepeat}/>} />
-      <Route path='/mainApp' element={<MainApp/>} />
+      <Route path='/home' element={<Home/>} />
+      <Route path='/movies' element={<Movies usedData={data}/>} />
+      <Route path='/tvSeries' element={<TvSeries usedData={data}/>} />
+      <Route path='/bookMark' element={<Bookmarked usedData={data}/>} />
     </Routes>
   );
 }

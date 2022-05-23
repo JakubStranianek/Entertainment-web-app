@@ -2,8 +2,8 @@ import React from "react";
 import "./mainApp.scss";
 import ContentBox from "./contentBox.js";
 import searchBox from "../../assets/icon-search.svg";
-import Trending from "./trending.js";
-import Recommend from "./recommend.js";
+import Trending from "./subPages/trending.js";
+import Recommend from "./subPages/recommend.js";
 import data from "./data.json";
 
 export default function mainApp() {  
@@ -19,7 +19,7 @@ export default function mainApp() {
       <Trending usedData={data}></Trending>
 
       <h2>Recommend for you</h2>      
-      <Recommend usedData={data}></Recommend>
+      <Recommend usedData={data}></Recommend>    
     </div>
   );
 }

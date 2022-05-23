@@ -1,10 +1,11 @@
-@import "../../defined-styles/definedStyles.scss";
+@import "../../../defined-styles/definedStyles.scss";
 
 
 .recommend {
     display: flex;
     flex-wrap: wrap;
     margin-top: 25px;
+    justify-content: space-between;
 
     .recommendMovie {
         position: relative;

@@ -29,11 +29,19 @@
         img {
             width: 20px;
         }
+
+        img:hover {
+            filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-55deg) saturate(600%) contrast(0.8);
+        }
     }
 
     #avatar {
         width: 40px;
         position: absolute;
         bottom: 35px;
+    }
+
+    .active {
+        filter:  brightness(0) invert(1);
     }
 }

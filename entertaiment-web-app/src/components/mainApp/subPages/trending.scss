@@ -1,4 +1,4 @@
-@import "../../defined-styles/definedStyles.scss";
+@import "../../../defined-styles/definedStyles.scss";
 
 .trending {
     display: flex;
@@ -56,6 +56,8 @@
                 @include headingS;
             }
         }
+
+
         .mark {
             position: absolute;
             top: 16px;
@@ -73,6 +75,34 @@
                 height: 14px;
                 border-radius: 0;
             }
+        }
+    }
+
+    .trend:hover {
+        opacity: 0.75;
+    }
+
+    .playHover {
+        width: 117px;
+        height: 48px;
+        border-radius: 28px;
+        background-color: rgba($color: $pureWhite, $alpha: 0.25);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+        img {
+            width: 30px;
+            height: auto;
+        }
+
+        p {
+            @include headingXS;
+            color: $pureWhite;
         }
     }
 }
