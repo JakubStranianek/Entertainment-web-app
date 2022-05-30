@@ -24,7 +24,7 @@ export default function MainApp() {
         <input type="text" placeholder="Search for movies or TV series" onChange={(e) => setSearchTerm(e.target.value)}></input>
       </div>
       
-      {window.location.pathname === "/home" ? 
+      {window.location.pathname === "/" || window.location.pathname === "/home" ? 
       <div>
         <h2>Trending</h2>
         <Trending usedData={dataForTrending} searchItem={searchTerm}></Trending>

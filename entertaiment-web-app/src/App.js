@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route, Navigate} from "react-router-dom"
 import { useState } from "react"
 import Login from "./components/login/login.js"
 import SignUp from "./components/signUp/signUp.js"
@@ -41,9 +41,14 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<Login mail={email} pass={password} validM={validMail} handleM={handleEmail} handleP={handlePassword} handleS={handleSubmit}/>}/>
+      <Route path='/logIn' element={<Login mail={email} pass={password} validM={validMail} handleM={handleEmail} handleP={handlePassword} handleS={handleSubmit}/>}/>
       <Route path='/signUp' element={<SignUp mail={email} pass={password} validM={validMail} handleM={handleEmail} handleP={handlePassword} handleS={handleSubmit} setPassR={handlePasswordRepeat} passR={passwordRepeat}/>} />
-      <Route path='/home' element={<Home/>} />
+      <Route path='/' 
+      render={() => {
+        return (
+            <Navigate to="/home" /> 
+        )
+    }} element={<Home/>}/>
       <Route path='/movies' element={<Home/>}/>
       <Route path='/tvSeries' element={<Home/>}/>
       <Route path='/bookmark' element={<Home/>}/>

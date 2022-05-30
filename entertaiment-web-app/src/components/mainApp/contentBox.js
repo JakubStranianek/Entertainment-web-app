@@ -14,7 +14,7 @@ export default function ContentBox() {
         <img src={logo} alt="contentBoxLogo" id='logoContent'></img>
 
         <div className='categories'>
-            <NavLink to="/home">
+            <NavLink to="/">
               <img src={home} alt="home"></img>
             </NavLink>
 
