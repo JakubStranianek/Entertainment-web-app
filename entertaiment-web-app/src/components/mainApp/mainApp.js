@@ -14,22 +14,23 @@ export default function MainApp() {
   const [dataForBookmarkedM] = useState(data.filter((book) => book.isBookmarked === true && book.category === "Movie"));
   const [dataForBookmarkedTv] = useState(data.filter((book) => book.isBookmarked === true && book.category === "TV Series"));
   
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div className="mainApp">
       <ContentBox></ContentBox>
       <div className="searchBox">
         <img src={searchBox} alt="searchIcon"></img>
-        <input type="text" placeholder="Search for movies or TV series"></input>
+        <input type="text" placeholder="Search for movies or TV series" onChange={(e) => setSearchTerm(e.target.value)}></input>
       </div>
       
       {window.location.pathname === "/home" ? 
       <div>
         <h2>Trending</h2>
-        <Trending usedData={dataForTrending}></Trending>
+        <Trending usedData={dataForTrending} searchItem={searchTerm}></Trending>
   
         <h2>Recommend for you</h2>      
-        <Recommend usedData={dataForRecommend}></Recommend>
+        <Recommend usedData={dataForRecommend} searchItem={searchTerm}></Recommend>
       </div>
 
         : ""  
@@ -38,7 +39,7 @@ export default function MainApp() {
     {window.location.pathname === "/movies" ? 
       <div>
         <h2>Movies</h2>      
-        <Recommend usedData={dataForMovies}></Recommend>
+        <Recommend usedData={dataForMovies} searchItem={searchTerm}></Recommend>
       </div>
 
         : ""  
@@ -47,7 +48,7 @@ export default function MainApp() {
     {window.location.pathname === "/tvSeries" ? 
       <div>
         <h2>Tv Series</h2>      
-        <Recommend usedData={dataForTvSeries}></Recommend>
+        <Recommend usedData={dataForTvSeries} searchItem={searchTerm}></Recommend>
       </div>
 
         : ""  
@@ -56,10 +57,10 @@ export default function MainApp() {
          {window.location.pathname === "/bookmark" ? 
       <div>
         <h2>Bookmarked movies</h2>      
-        <Recommend usedData={dataForBookmarkedM}></Recommend>
+        <Recommend usedData={dataForBookmarkedM} searchItem={searchTerm}></Recommend>
 
         <h2>Bookmarked Tv Series</h2>      
-        <Recommend usedData={dataForBookmarkedTv}></Recommend>
+        <Recommend usedData={dataForBookmarkedTv} searchItem={searchTerm}></Recommend>
       </div>
 
         : ""  

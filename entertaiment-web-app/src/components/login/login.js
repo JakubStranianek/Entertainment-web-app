@@ -20,7 +20,7 @@ export default function Login(props) {
                 {pass.length === 0  ? <div className='error'>Can’t be empty</div> : ""}
             </form>
 
-            <Link to={validM && pass.length > 0 ? "/mainApp" : ""}>
+            <Link to={validM && pass.length > 0 ? "/home" : ""}>
                 <button onSubmit={handleS}>Login to your account</button>
             </Link>
 

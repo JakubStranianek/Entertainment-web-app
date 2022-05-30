@@ -9,8 +9,15 @@ export default function recommend(props) {
 
   return (
     <div className="recommend">
-      {props.usedData.map((index) =>
-          <div className="recommendMovie">
+      {props.usedData.filter((val) => {
+          if (val === "") {
+            return val;
+          } else if (val.title.toLowerCase().includes(props.searchItem.toLowerCase())) {
+            return val;
+          }
+        }
+        ).map((index) =>
+          <div className="recommendMovie" key={index.title}>
             <img
               src={index.thumbnail.regular.small}
               alt={"movie" + index.title}

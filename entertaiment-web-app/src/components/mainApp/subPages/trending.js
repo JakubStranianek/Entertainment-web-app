@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./trending.scss"
 
 import movie from "../../../assets/icon-nav-movies.svg";
@@ -7,12 +7,19 @@ import marked from "../../../assets/icon-bookmark-full.svg";
 import unMarked from "../../../assets/icon-bookmark-empty.svg";
 import play from "../../../assets/icon-play.svg";
 
-export default function trending(props) {
+export default function Trending(props) {
   
   return (
     <div className="trending">
-        {props.usedData.map((index) =>
-            <div className="trend">
+        {props.usedData.filter((val) => {
+          if (val === "") {
+            return val;
+          } else if (val.title.toLowerCase().includes(props.searchItem.toLowerCase())) {
+            return val;
+          }
+        }
+        ).map((index) =>
+            <div className="trend" key={index.title}>
               <img
                 src={index.thumbnail.trending.large}
                 alt={"trending" + index.title}

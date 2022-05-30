@@ -26,7 +26,7 @@ export default function signUp(props) {
             </form>
 
             
-            <Link to={validM && passR === pass && pass.length > 0 ? "/mainApp" : ""}>
+            <Link to={validM && passR === pass && pass.length > 0 ? "/home" : ""}>
                 <button onSubmit={handleS}>Create an account</button>
             </Link>
             

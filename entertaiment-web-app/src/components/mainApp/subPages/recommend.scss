@@ -68,7 +68,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-    
+            cursor: pointer;
+            
             img {
                 width: 11px;
                 height: 14px;
@@ -142,5 +143,15 @@
     .recommend .recommendMovie .mark{
         right: 8px;
         top: 8px;
+    }
+
+    .recommend .recommendMovie .playHover {
+        width: 84px;
+        height: 38px;
+        top: 35%;
+
+        img {
+            width: 20px;
+        }
     }
 }
