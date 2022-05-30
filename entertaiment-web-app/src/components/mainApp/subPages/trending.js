@@ -12,7 +12,6 @@ export default function trending(props) {
   return (
     <div className="trending">
         {props.usedData.map((index) =>
-          index.isTrending ? (
             <div className="trend">
               <img
                 src={index.thumbnail.trending.large}
@@ -47,9 +46,6 @@ export default function trending(props) {
                   <p>Play</p>
               </div>
             </div>
-          ) : (
-            ""
-          )
         )}
       </div>
   )

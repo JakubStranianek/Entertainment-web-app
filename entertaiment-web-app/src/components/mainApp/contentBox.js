@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./contentBox.scss"
 import logo from "../../assets/logo.svg"
 import bookmark from "../../assets/icon-nav-bookmark.svg"

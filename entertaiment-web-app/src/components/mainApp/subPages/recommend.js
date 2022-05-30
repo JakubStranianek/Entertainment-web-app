@@ -4,15 +4,12 @@ import movie from "../../../assets/icon-nav-movies.svg";
 import tvSeries from "../../../assets/icon-nav-tv-series.svg";
 import marked from "../../../assets/icon-bookmark-full.svg";
 import unMarked from "../../../assets/icon-bookmark-empty.svg";
-
+import play from "../../../assets/icon-play.svg";
 export default function recommend(props) {
 
   return (
     <div className="recommend">
       {props.usedData.map((index) =>
-        index.isTrending === true ? (
-          ""
-        ) : (
           <div className="recommendMovie">
             <img
               src={index.thumbnail.regular.small}
@@ -42,8 +39,12 @@ export default function recommend(props) {
                 <img src={unMarked} alt="unMarked"></img>
               </div>
             )}
+
+              <div className='playHover'>
+                  <img src={play} alt="playButton"></img>
+                  <p>Play</p>
+              </div>
           </div>
-        )
       )}
     </div>
   );
